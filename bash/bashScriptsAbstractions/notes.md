@@ -1,4 +1,4 @@
-#Pourpose
+## Bash Abstractions
 
 Reading bash scripts from different sources and understand every-single line
 

@@ -1,6 +1,6 @@
-### Git
+# Git
 
--
+## Notes
 
 ## git diff
 

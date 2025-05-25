@@ -1,4 +1,6 @@
-# Description
+# Makefiles
+
+## Notes
 
 - using regex so (? means 0|1 ocurrence)
 - Notes about makefile

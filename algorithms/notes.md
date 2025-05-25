@@ -1,3 +1,5 @@
+# Git
+## Notes
 # Chapter_2 \[Pointer Manipulation\]
 
 - Dangling pointers -> pointers that points to invalid addresses.

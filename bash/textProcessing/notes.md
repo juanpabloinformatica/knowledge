@@ -1,4 +1,4 @@
-# Pourpose
+## Text Processing
 
 Learning text processing with bash, by understanding the coreutils.
 
