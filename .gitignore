@@ -1,6 +1,7 @@
 tags
 pending.txt
 *.pdf
+!knowledge.pdf
 *.html
 *.swp
 
