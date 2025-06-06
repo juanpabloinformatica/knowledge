@@ -8,6 +8,29 @@
 
 - vm-translator := lambda vm_code: -> hack_object_code
 
+## Workflow order
+
+```mermaid
+
+  flowchart LR
+  subgraph CreateWorkflow
+      direction TB
+      general[General steps] --> specific[Specific steps]
+  end
+  subgraph Information
+      direction TB
+      videos[video source] --> reading[reading source]
+  end
+  Information --> CreateWorkflow
+  CreateWorkflow -- "if x step is ready" --> A[Implement step]
+  A -- "if implementation fails and no idea" --> Information
+  A -- "if x step is done and can be tested" --> B[test step]
+  B -- "if x step test succeed" --> CreateWorkflow
+  B -- "if x step NOT test succeed" --> A
+  CreateWorkflow -- "Doubts" --> Information
+
+```
+
 ## VM on Hack platform mapping
 
 ![VM on Hack platform](./standardMappingVmHackPlatform.png)
@@ -224,16 +247,14 @@ so c_arithmetic
 - I have to do some things I forgot to do an actually there are some mapping errors
   so basically this is what I should do
 
-  - The code writter instead of creating tmp variables starting from reg#16 it should start from 256 
-    this is because from [15--256) is booked for static variables
+    - The code writter instead of creating tmp variables starting from reg#16 it should start from 256
+      this is because from [15--256) is booked for static variables
 
-  - I need to also consider the case the line command is a pointer (this/that) and embed the index 3 or 4 
-    this mean taken the register 3 or 4 for following the convention.
+    - I need to also consider the case the line command is a pointer (this/that) and embed the index 3 or 4
+      this mean taken the register 3 or 4 for following the convention.
 
-  - Ok the operations I do as getting the negatives values and stuff like that   
-    I could put them in the general purpose registers. R13-R15
-    
-    
+    - Ok the operations I do as getting the negatives values and stuff like that  
+      I could put them in the general purpose registers. R13-R15
 
 ### chapter 8
 
@@ -242,11 +263,12 @@ so c_arithmetic
 - abstract crucial information even if I have seen the video
   and read about it I didn't do it really deeply
   now I will take crucial information in order to elaborate an general workflow
- 
+
 - Now I can do the following I can check the test, and check what are the diff between those
   files and the files previously tested in chapter 7
 
 #### Steps
+
 - Implement program flow
     - basic_loop
     - fibonacci
