@@ -1,0 +1,12 @@
+# Add your commit message below
+
+
+
+#    Feat: (new feature for the user, not a new feature for build script)
+#    Fix: (bug fix for the user, not a fix to a build script)
+#    Docs: (changes to the documentation)
+#    Style: (formatting, missing semi colons, etc; no production code change)
+#    Refactor: (refactoring production code, eg. renaming a variable)
+#    Test: (adding missing tests, refactoring tests; no production code change)
+#    Chore: (updating grunt tasks etc; no production code change)
+
