@@ -1,0 +1,6 @@
+---
+title: Knowledge
+author: Juan Pablo Prada Mejia
+Created: 06-06-2025
+language: en-US
+---
