@@ -232,3 +232,8 @@ result
 - git repo wrapping the submodules, keep track of the commit ids
 
 - need to check this part yet
+
+
+
+### Things to check
+- [ git-filter-repo for rewriting Git history -Elijah Newren | GitMerge 2024 ](https://www.youtube.com/watch?v=KXPmiKfNlZE)
