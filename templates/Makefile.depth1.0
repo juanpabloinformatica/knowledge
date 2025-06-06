@@ -6,11 +6,11 @@ NOTES:=notes.md
 
 pdf: subdirs $(NOTES)
 	sed -e '$$a\\\newpage' $(NOTES)
-	pandoc -f markdown -o $(basename $(NOTES)).pdf -t pdf $(NOTES)
+	pandoc -f gfm -o $(basename $(NOTES)).pdf -t pdf $(NOTES)
 
 html: subdirs $(NOTES)
 	sed -e '$$a\\\newpage' $(NOTES)
-	pandoc -f markdown -o $(basename $(NOTES)).html -t html $(NOTES)
+	pandoc -f gfm -o $(basename $(NOTES)).html -t html $(NOTES)
 
 subdirs:$(SUBDIRS)
 	echo "$(addsuffix /$(NOTES),$(SUBDIRS))"
@@ -20,10 +20,10 @@ subdirs:$(SUBDIRS)
 $(SUBDIRS):
 	$(MAKE) -C $@ $(type)
 
-clean: 
+clean:
 	echo "Removing *html and *pdf"
 	find $(PWD) -type f '!' -path "*.git*" \( -name "*.html" -or -name "*.pdf" \) -delete
-	
+
 
 .PHONY: subdirs $(SUBDIRS) clean
 
